@@ -7,13 +7,13 @@ from openedoo.core.libs.auth import login as user_login
 from openedoo.core.libs.auth import read_session, logout as user_logout
 
 
-modul_member = Blueprint('member', __name__)
+module_member = Blueprint('member', __name__)
 
-@modul_member.route('/', methods=['POST', 'GET'])
+@module_member.route('/', methods=['POST', 'GET'])
 def index():
     return "Hello Hello Hello"
 
-@modul_member.route('/register', methods=['POST','GET'])
+@module_member.route('/register', methods=['POST','GET'])
 def add():
     try:
         if request.method == 'POST':
@@ -36,7 +36,7 @@ def add():
     except Exception as e:
         abort(401)
 
-@modul_member.route('/delete', methods=['GET','POST'])
+@module_member.route('/delete', methods=['GET','POST'])
 @read_session
 def delete():
     if request.method == 'POST':
@@ -46,7 +46,7 @@ def delete():
         user_id = request.args.get('id')
     return delete(user_id=user_id)
 
-@modul_member.route('/find', methods=['GET', 'POST'])
+@module_member.route('/find', methods=['GET', 'POST'])
 def find():
     if request.method == 'POST':
         load_json = json.loads(request.data)
@@ -55,18 +55,18 @@ def find():
         #member.object.order_by(user_id=user_id)
         return module_member.object.show_data()
 
-@modul_member.route('/update', methods=['GET','POST'])
+@module_member.route('/update', methods=['GET','POST'])
 def update():
     if request.method == 'POST':
         load_json = json.loads(request.data)
 
-@modul_member.route('/activation/<key>',methods=['GET'])
+@module_member.route('/activation/<key>',methods=['GET'])
 def activation(key):
     aktivasi = json.dumps(module_member.activation(key))
     resp = response(aktivasi, status=200, mimetype='application/json')
     return resp
 
-@modul_member.route('/password', methods=['POST','GET'])
+@module_member.route('/password', methods=['POST','GET'])
 @read_session
 def password():
     if request.method == 'POST':
@@ -81,7 +81,7 @@ def password():
 
     return resp
 
-@modul_member.route('/login', methods=['POST', 'GET'])
+@module_member.route('/login', methods=['POST', 'GET'])
 def login():
     try:
         if request.method == 'POST':
@@ -93,7 +93,7 @@ def login():
     except Exception as e:
         abort(500)
 
-@modul_member.route('/logout')
+@module_member.route('/logout')
 def logout():
     log = json.dumps(user_logout())
     resp = Response(log, status=200, mimetype='application/json')

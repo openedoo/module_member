@@ -1,5 +1,5 @@
 {
-    "name":"modul_member",
+    "name":"module_member",
     "version":"0.0.1",
     "requirement":"openedoo_core",
     "pip_library":[],
