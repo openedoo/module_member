@@ -27,7 +27,7 @@ def registration(username, password, email, name, phone):
         return {'message':'invalid mail'}
 
     acak_pass = (random_word(16)+username)
-    password_hash = hasing_werkzeug(password)
+    password_hash = hashing_werkzeug(password)
     access_token = hashing_password(acak_pass)
     try:
         data = od_users(
