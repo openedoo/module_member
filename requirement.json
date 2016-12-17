@@ -5,5 +5,5 @@
     "pip_library":[],
     "comment":"testing modul openedoo",
     "type":"end_point",
-    "url_endpoint":"/member
+    "url_endpoint":"/member"
 }
