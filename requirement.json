@@ -3,7 +3,8 @@
     "version":"0.0.1",
     "requirement":"openedoo_core",
     "pip_library":[],
-    "comment":"testing modul openedoo",
-    "type":"end_point",
-    "url_endpoint":"/member"
+    "descriptiom":"testing modul openedoo",
+    "type":"git",
+    "url_endpoint":"/member",
+    "url_git":"https://github.com/openedoo/module_member"
 }
