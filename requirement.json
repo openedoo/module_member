@@ -7,5 +7,6 @@
     "type":"git",
     "url_endpoint":"/member",
     "url_git":"https://github.com/openedoo/module_member",
-    "author":"officially"
+    "author":"officially",
+    "database":"database.py"
 }

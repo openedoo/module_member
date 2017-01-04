@@ -1,8 +1,8 @@
 from datetime import datetime, timedelta
-from openedoo.core.db import query
-from openedoo.core.db.db_tables import od_users
+#from openedoo.core.db import query
+#from database import od_users
 from openedoo.core.libs.tools import *
-from openedoo.core.libs.auth import *
+from auth import *
 import json
 from email.utils import parseaddr
 from functools import wraps
@@ -12,7 +12,7 @@ from openedoo.core.libs import session, Response
 now_temp = datetime.now()
 now = now_temp.strftime('%Y-%m-%d %H:%M:%S')
 
-query = query()
+#query = query()
 
 def registration(username, password, email, name, phone):
     user_check = query.select_db(od_users, od_users.username, value=username)
