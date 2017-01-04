@@ -6,5 +6,6 @@
     "descriptiom":"testing modul openedoo",
     "type":"git",
     "url_endpoint":"/member",
-    "url_git":"https://github.com/openedoo/module_member"
+    "url_git":"https://github.com/openedoo/module_member",
+    "author":"officially"
 }
