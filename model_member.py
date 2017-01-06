@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
-#from openedoo.core.db import query
-#from database import od_users
+from openedoo.core.db import Query
+from database import OD_users as od_users
 from openedoo.core.libs.tools import *
 from auth import *
 import json
@@ -12,7 +12,7 @@ from openedoo.core.libs import session, Response
 now_temp = datetime.now()
 now = now_temp.strftime('%Y-%m-%d %H:%M:%S')
 
-#query = query()
+query = Query()
 
 def registration(username, password, email, name, phone):
     user_check = query.select_db(od_users, od_users.username, value=username)

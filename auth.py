@@ -1,10 +1,11 @@
 from functools import wraps
 from openedoo.core.libs import request, abort, session, Response
-#from openedoo.core.db import query
-from database import od_users
+from openedoo.core.db import Query
+from database import OD_users as od_users
 from openedoo.core.libs.tools import *
 
-#query_auth = query()
+query_auth = Query()
+
 def check_auth(username, password):
     return username == 'admin' and password == 'secret'
 
