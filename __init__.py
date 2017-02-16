@@ -98,3 +98,5 @@ def logout():
     log = json.dumps(user_logout())
     resp = Response(log, status=200, mimetype='application/json')
     return resp
+
+#TESEEEETTTT
