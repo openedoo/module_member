@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
-from openedoo.core.db import Query
+#from openedoo.core.db import Query
+from openedoo_project.db import Query
 from database import OD_users as od_users
 from openedoo.core.libs.tools import *
 from auth import *

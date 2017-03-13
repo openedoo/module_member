@@ -1,6 +1,6 @@
 from functools import wraps
 from openedoo.core.libs import request, abort, session, Response
-from openedoo.core.db import Query
+from openedoo_project.db import Query
 from database import OD_users as od_users
 from openedoo.core.libs.tools import *
 
